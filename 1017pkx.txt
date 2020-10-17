@@ -1,0 +1,64 @@
+10.17 2020F
+
+论文框架
+
+Summary
+问题描述，提出方案
+问题分析，参数、变量、样本等
+模型描述，设计、功能、结论等
+结论，比如所提出的解决方案的必要性与合理性，以及不足和改进方法
+其他，比如这篇的敏感性分析
+Keywords:xxx, xxx,...
+
+Contents
+Introduction：现状、大背景概况；
+                        task分解与抽象
+Analysis：这里可以有个思维导图，问题现状不同方面的原因与影响，比如这篇是分成survival与heritage两方面
+                下面根据以上列出的不同方面进行具体分析
+                每个方面的基本思路大概就是  是什么 为什么 有啥影响 
+                有的思考角度我在看题时没想到，比如material culture (movable/immovable)和intangible culture，学到了学到了
+                
+Policy given by us：提出必要前提、适用范围和情境
+                                 具体阐释：内容和要求，依据
+                                 基本上每一条都对应之前analysis里提出的每一方面
+Notations：要用到的符号和一些名词定义、概念解释
+Models：每一步公式的推导和得出有依据，每个系数数值和变量含义声明清楚，有图有真相
+               可能有we assume that 之类的假设前提，声明清楚
+               一步步推导完了，得出最终公式和相关图像以及结论
+               model 2 中给出权重分布以后还声明了一下 so the result is reliable
+               样本对象选择的合理性
+               对比得出结论，横向&纵向
+               Lotka-Volterra model
+
+Improvements and Weaknesses：主要针对上述结论中太过理想化的地方
+               （但是可以有：理想化的状态下问题已经那么严重了，再考虑次生灾害及其他因素，
+                  问题会更加严重balabala因此我们的policy是有必要的）
+               以及时间跨度大的情况下的不可控未知因素（periodically updated based on xxx）
+               特殊情况特殊考虑
+Importance and Strengths: 满足现状需要；合理性（影响因素考虑全面等）；对问题的多方面分析考虑……
+Sensitivity Analysis：敏感性分析：敏感性分析法是指从众多不确定性因素中找出对投资项目经济效益指标有
+                                 重要影响的敏感性因素，并分析、测算其对项目经济效益指标的影响程度和敏感性程度，
+                                 进而判断项目承受风险能力的一种不确定性分析方法。
+                                  
+Conclusion: 概括以上内容
+
+分段，关键词中心句加粗，一些名词给出解释和举例
+图表有data source和引用来源
+
+一些词语：
+人均 per capita
+熵权法 Entropy Weight Method (EWM)：熵权法是一种客观赋值方法。在具体使用的过程中，熵权法根据
+                                                                 各指标的变异程度，利用信息熵计算出各指标的熵权，再通过熵权
+                                                                  对各指标的权重进行修正，从而得到较为客观的指标权重。
+承载力 carrying capacity
+菜单成本 menu costs
+线性拟合 linear fitting
+We can see from the geometry relation and equation(1) that, xxxx（一个公式）
+序数 ordinal number
+净价值 net value
+
+In consideration of xxx, we improved our policies: xxxxx...
+We endeavor to xxx under the premise of xxx...
+
+
+latex语法  学习ing  orz
