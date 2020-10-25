@@ -1,0 +1,337 @@
+\documentclass{article}
+
+\usepackage{palatino}
+
+\usepackage[UTF8, nocap]{ctex} %如果想使用中文输入的话，可以增加该宏包
+\usepackage{amsmath}   %数学公式
+\usepackage{xfrac}     %行间分式
+\usepackage{graphicx}  %图片
+
+\usepackage{ctex}        %表格
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{fancyhdr}    %页眉页脚
+
+\usepackage[justification=centering]{caption}  %图表标题居中
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{arydshln}
+\usepackage{booktabs}
+
+\usepackage{cite}   %引用
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\setlength{\parindent}{0pt}
+
+\usepackage{setspace}
+\onehalfspacing  %行间距是字号的1.5倍
+
+\addtolength{\parskip}{.4em}   %增加段间距 0.4em
+
+\title{你好，world!}
+\author{xiaopian}
+\date{2020.1.1}
+
+\pagestyle{fancy}  %页眉页脚
+\lhead{hiahiahia} 
+\chead{} 
+\rhead{The performance of new graduates} 
+\lfoot{From: K. Grant} 
+\cfoot{To: Dean A. Smith}
+\rfoot{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
+
+\geometry{a4paper, left = 3.17cm, right = 3.17cm, top = 2.54cm, bottom = 2.54cm}
+
+\begin{document}
+
+\bibliographystyle{unsrt}
+
+\thispagestyle{empty}   %第一页目录页不加页眉页脚
+\tableofcontents
+\maketitle
+你好，world! 
+
+I love you!        %换行要两次回车
+\section{你好中国}   %一级标题
+中国在East Asia.\\
+\textup{中国在East Asia.}\\
+意大利斜体：\textit{中国在East Asia.}\\
+slanted斜体：\textsl{中国在East Asia.}\\
+显示小体大写文本：\textsc{中国在East Asia.}\\
+加粗命令：\textbf{中国在East Asia.}
+\subsection{Hello Beijing}   %二级标题
+北京是capital of China.
+\subsubsection{Hello Dongcheng District}  %三级标题
+\paragraph{Tian'anmen Square}
+is in the center of Beijing
+\subparagraph{Chairman Mao}    %subparagraph比paragraph缩近了一点
+is in the center of 天安门广场。
+\subsection{Hello 山东}
+\paragraph{山东大学} is one of the best university in 山东。
+
+\section{FORMULA}
+公式啥的
+\subsection{formula}
+Einstein 's $E=mc^2$   %行内
+\[ E=mc^2. \]     %行间，没有编号
+\begin{equation*}  %行间，没有编号
+    E=mc^2
+\end{equation*}
+
+\begin{equation}  %行间，有编号
+E=mc^2
+\end{equation}
+%行内公式的标点，应该放在数学模式的限定符之外，而行间公式则应该放在数学模式限定符之内。
+\[ z = r_i\cdot e^{2\pi i}. \]  %上标^，下标_
+
+\paragraph{分式和根式}分式和根式：
+$\sqrt{x}$, $\dfrac{1}{2}$，$\frac{1}{2}$. %dfrac：强制行内分数显示为行间的大小
+$\sfrac{1}{2}$   %写成1/2的样子（xfrac宏包提供）
+
+\[ \cfrac{a}{1+\cfrac{b}{1+\cfrac{c}{d}}} \]   %cfrac繁分式（但是好像写出来差不多？）
+\[ \frac{a}{1+\cfrac{b}{1+\cfrac{c}{d}}} \]
+
+\[ \sqrt{x}, \]    %根式\sqrt{·}，分式\frac{分子}{分母}
+
+\[ \frac{1}{2}. \]
+\[ \tfrac{1}{2}. \]    %强制行间显示为行内大小 （感觉用处一般般）
+
+\paragraph{符号：}符号：
+\[ \pm\; \times \; \div\; \cdot\; \cap\; \cup\;
+\geq\; \leq\; \neq\; \approx \; \equiv \]
+\[ \sum, \prod, \lim, \int \]
+
+$ \sum_{i=1}^n i\quad \prod_{i=1}^n $  %求和 求积
+
+
+limit限制行高$ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
+
+\[ \lim_{x\to0}x^2 \quad \int_a^b x^2 dx \]  %lim和积分
+\[ \lim\nolimits _{x\to0}x^2\quad \int\nolimits_a^b x^2 dx \]
+
+\paragraph{定界符}定界符：
+$(), [], \{\}, \langle\rangle $
+$ \lvert\rvert, \lVert\rVert, \|$
+\[ \Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr) \]
+\[ \Biggl[\biggl[\Bigl[\bigl[[x]\bigr]\Bigr]\biggr]\Biggr] \]
+\[ \Biggl \{\biggl \{\Bigl \{\bigl \{\{x\}\bigr \}\Bigr \}\biggr \}\Biggr\} \]
+\[ \Biggl\langle\biggl\langle\Bigl\langle\bigl\langle\langle x
+\rangle\bigr\rangle\Bigr\rangle\biggr\rangle\Biggr\rangle \]
+\[ \Biggl\lvert\biggl\lvert\Bigl\lvert\bigl\lvert\lvert x
+\rvert\bigr\rvert\Bigr\rvert\biggr\rvert\Biggr\rvert \]
+\[ \Biggl\lVert\biggl\lVert\Bigl\lVert\bigl\lVert\lVert x
+\rVert\bigr\rVert\Bigr\rVert\biggr\rVert\Biggr\rVert \]
+
+\[ x_1,x_2,\dots ,x_n\quad 1,2,\cdots ,n\quad  %dots cdots位置不同
+\vdots\quad \ddots \]
+
+\paragraph{矩阵}
+\[ \begin{pmatrix} a&b\\c&d \end{pmatrix} \quad  %圆括号
+\begin{bmatrix} a&b\\c&d \end{bmatrix} \quad     %方括号
+\begin{Bmatrix} a&b\\c&d \end{Bmatrix} \quad     %花括号
+\begin{vmatrix} a&b\\c&d \end{vmatrix} \quad     %单竖线
+\begin{Vmatrix} a&b\\c&d \end{Vmatrix} \]        %双竖线
+Marry has a little matrix $ ( \begin{smallmatrix} a&b\\c&d \end{smallmatrix} ) $.   %行内矩阵（好可爱啊）
+
+\paragraph{长公式}长公式：
+\begin{multline}
+    x = a+b+c+{} \\
+    d+e+f+g
+\end{multline}  %multline*是没有编号
+
+\[\begin{aligned}
+    x ={}& a+b+c+{} \\
+    &d+e+f+g
+    \end{aligned} \]
+
+公式组：
+\begin{gather}
+    a = b+c+d \\
+    x = y+z
+    \end{gather}
+    \begin{align}
+    a &= b+c+d \\
+    x &= y+z
+    \end{align}
+
+分段函数：
+\[ y= \begin{cases}
+    -x,\quad x\leq 0 \\
+    x,\quad 0<x<2 \\
+    x^2,\quad x\ge 2
+    \end{cases} \]
+
+\section{图表}
+\subsection{插入图片}
+
+\includegraphics{aaa.jpg}\\
+\includegraphics[width = .5\textwidth]{aaa.jpg}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{aaa.jpg}
+    \caption{有图有真相}
+    \label{fig:myphoto}
+\end{figure}
+
+\subsection{表格}
+\begin{tabular}{lc|r|}  %第一列左对齐 第二列居中，第三列右对齐
+    \hline
+   操作系统& 发行版& 编辑器\\
+    \hline
+   Windows & MikTeX & TexMakerX \\
+    \hline
+   Unix/Linux & teTeX & Kile \\
+    \hline
+   Mac OS & MacTeX & TeXShop \\
+    \hline
+   通用& TeX Live & TeXworks \\
+    \hline
+   \end{tabular}\\
+
+\renewcommand\arraystretch{2}  %宽松的表格
+宽松的表格\\ \\
+\begin{tabular}{|lc|r|}  
+    \hline
+   操作系统& 发行版& 编辑器\\
+    \hline
+   Windows & MikTeX & TexMakerX \\
+    \hline
+   Unix/Linux & teTeX & Kile \\
+    \hline
+   Mac OS & MacTeX & TeXShop \\
+    \hline
+   通用& TeX Live & TeXworks \\
+    \hline
+   \end{tabular}
+ \\ \\ \\
+
+$\left(\begin{tabular}{ccc|c}
+        a11 & a12 & a13  & b1  \\
+        a21 & a22  & a23 & b2  \\ 
+        a31 & a32  & a33 & b3  \\     
+\end{tabular}\right)$
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{成绩}  \\    %合并两列
+    \hline
+    语文  &   数学  \\   
+    \hline    
+    87    & 100  \\
+    \hline  
+    \end{tabular}
+
+    \begin{tabular}{|c|r|r|}
+        \hline
+        & \multicolumn{2}{|c|}{成绩}   \\ \cline{2-3}
+        姓名   & 语文 & 数学 \\ 
+        \hline
+        张三   & 87 & 100 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{三线表} 绘制三线表
+
+    \begin{table}[h]   %[htbp]，意思就是优先放在此处，其次是每页的顶端，再次是底端
+    \centering
+    \caption{三线表}
+    \begin{tabular}{clllll}
+     \toprule
+     \multirow{2}{*}{obfuscations} & \multicolumn{5}{l}{Transformations}   \\
+     \cline{2-6}    % 画一条线
+     & Renaming & Dead code removal & control flow obfuscation & string encryption & code encryption \\
+     \midrule
+     1 & √ & ×  & × & √  & × \\
+     2 & √ & ×  & × & √  & × \\
+     3 & √ & ×  & × & √  & × \\
+     4 & √ & ×  & × & √  & × \\
+     \bottomrule
+    \end{tabular}
+    \end{table}
+
+
+   \paragraph{指定宽度的表格}
+   \begin{table}[h]
+   \caption{指定宽度表格\cite{doi:10.1080/07388550500346359}} 
+   \begin{tabular}{R{1cm}|C{3cm}|C{10cm}}
+   \bottomrule[2pt]
+   年份 & 获奖者 & 获奖原因\\
+   \specialrule{2pt}{0pt}{0pt}   %第1个参数是线条的粗细，第2个是上方的间隙、第3个是下方的间隙
+   1966 & Alan J. Perlis & 先进编程技术和编译架构方面的贡献\\
+   \hline
+   1971 & John McCarthy & Lisp语言、程序语义、程序理论、人工智能方面的贡献\\
+   \hline
+   1972 & E. W. Dijkstra & 对开发Algol做出了原理性贡献\\
+   \hline
+   1977 & John Backus & 在高级语言方面所做出的具有广泛和深远意义的贡献，特别是在Fortran语言方面\\
+   \toprule[2pt]
+   \end{tabular}
+   \end{table}
+
+   \begin{table}[h]
+    \caption{指定宽度表格\cite{jambeck2015plastic}} 
+    \begin{tabular}{R{1cm}|C{3cm}|C{10cm}}
+    \bottomrule[2pt]
+    年份 & 获奖者 & 获奖原因\\
+    \specialrule{2pt}{0pt}{0pt}   %第1个参数是线条的粗细，第2个是上方的间隙、第3个是下方的间隙
+    1966 & Alan J. Perlis & 先进编程技术和编译架构方面的贡献\\
+    \hline
+    1971 & John McCarthy & Lisp语言、程序语义、程序理论、人工智能方面的贡献\\
+    \hline
+    1972 & E. W. Dijkstra & 对开发Algol做出了原理性贡献\\
+    \toprule[2pt]
+    \end{tabular}
+    \end{table}
+
+\section{PAPER NOTES}
+\subsection{结构}
+\begin{itemize}
+    \item 跟上一篇差不太多。\cite{1}   \\   
+    交代背景与现状，简述问题，给出assumptions和notations，建立PWH Model,
+          分别对P W H三个方面进行初步模拟预测。完善PWH Model。建立IPWH Model，引入alternatives、
+          policy intervention、eco-awareness、recovery的影响因素。
+          这一趴不仅仅给出预测结果，而且用来设立目标。两个model的结果需要进行比较，来说明IPWH下
+          目标的可达成性。然后说明达成目标后的影响，注意多方面，且量化。
+          后一段是全球不同地区的差异性。根据评分分级（这里的几张图感觉都很漂亮）。
+          最后就是sensity analysis和优劣分析，和总结。（sensity analysis那张图真好看）
+    \item 中间有两张流程图，感觉可以借鉴下，比如这篇参数比较多、过程相对有一丢丢复杂的情况。
+        （也比较有助于让我自己看懂orz）
+    \item 最后有Memo和Appendice。Memo里的那张图好好看啊。\\
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics{Memo.jpg}
+        \caption{Memo}
+        \label{fig:myphoto}
+    \end{figure}
+    \item 这篇中间的公式推导建模说实话我有点没太看明白。。。有些数据的来源感觉好像并没有交代的很清楚？比如β$_1$，α$_0$，α$_1$，还有个地方直接here we choose 10\%.
+    以及policy intervention、eco-awareness是怎么量化的，感觉用指数评估有点简单了？
+\end{itemize}
+
+\subsection{\LaTeX 方面}
+正在熟悉最基本的操作，用的还不太熟练。\\
+这一篇大部分还相对比较友好，图片、表格啥的比较常规。不过也有很多难点。
+\subparagraph{1.}变量、符号很多，希腊字母很多，记不住需要查表。
+\subparagraph{2.}公式比较复杂，一层一层嵌套，试了一下感觉有点晕（大概率还是操作不熟练的原因，要多试验练习)
+\subparagraph{3.}Memo和Appendice的排版还没有琢磨透，reference的用的也有点磕绊。\\
+                总的来说就是熟练度还远远远远不够。可以一边琢磨模板排版的同时一边熟悉操作，一边再找一找其他的排版样式。\\
+                
+
+
+\begin{thebibliography}{99}
+    \bibitem{1} D.~E. KNUTH   The \TeX{}book  the American
+    Mathematical Society and Addison-Wesley
+    Publishing Company , 1984-1986.
+    \bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
+    Addison-Wesley Publishing Company, 1986.
+\end{thebibliography}
+
+\end{document}
